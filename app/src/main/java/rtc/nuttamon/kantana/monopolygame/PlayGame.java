@@ -19,6 +19,7 @@ public class PlayGame extends AppCompatActivity {
     private RadioButton[] choiceRadioButtons;
     private ImageView imageView;
     private int timesAnInt = 0;
+    private RadioGroup radioGroup;
 
 
     @Override
@@ -32,14 +33,30 @@ public class PlayGame extends AppCompatActivity {
 
         buttonController();
 
+        redioController();
+
 
     } // Main Method
+
+    private void redioController() {
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+            }
+        });
+
+
+    }
 
     private void buttonController() {
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                radioGroup.clearCheck();
 
                 timesAnInt += 1;
                 Log.d("26decV1", "times ==> " + timesAnInt);
@@ -101,6 +118,7 @@ public class PlayGame extends AppCompatActivity {
         choiceRadioButtons[2] = (RadioButton) findViewById(R.id.radioButton2);
         choiceRadioButtons[3] = (RadioButton) findViewById(R.id.radioButton);
         imageView = (ImageView) findViewById(R.id.imageView8);
+        radioGroup = (RadioGroup) findViewById(R.id.ragChoice);
 
 
     }
