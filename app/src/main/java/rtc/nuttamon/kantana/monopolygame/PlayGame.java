@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -43,6 +44,7 @@ public class PlayGame extends AppCompatActivity {
                 timesAnInt += 1;
                 Log.d("26decV1", "times ==> " + timesAnInt);
                 showView(timesAnInt);
+
 
             }   // onClick
         });
@@ -102,4 +104,5 @@ public class PlayGame extends AppCompatActivity {
 
 
     }
+
 } // Main Class
